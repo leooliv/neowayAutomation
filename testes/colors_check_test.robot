@@ -4,7 +4,7 @@ Test Setup        Dado que o usuário acesse o site da w3schools
 Test Teardown     Fechar o navegador
 
 *** Test Cases ***
-Cenário 2: Validar valores hexadecimais de cores na tabela de Grupos de Cores
+Cenário 2: Validar hexadecimais de cores na tabela de Grupos de Cores
     Dado que o usuário esteja no site da w3schools
     E navegue para o menu Tutorials -> Learn Colors
     E selecione o tutorial sobre Color Groups

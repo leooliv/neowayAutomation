@@ -1,179 +1,479 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-12T23:12:00.468016" rpa="false" schemaversion="5">
-<suite id="s1" name="Html Forms Test" source="C:\Users\leona\OneDrive\Documentos\A_Programming\neowayAutomationRobot\testes\html_forms_test.robot">
-<test id="s1-t1" name="Cenário 3: Validar envio de dados do formulário HTML no tutorial sobre HTML Forms" line="7">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-13T20:26:56.120117" rpa="false" schemaversion="5">
+<suite id="s1" name="Colors Check Test &amp; Html Forms Test &amp; Modal Box Test">
+<suite id="s1-s1" name="Colors Check Test" source="C:\Users\leona\OneDrive\Documentos\A_Programming\neowayAutomationRobot\testes\colors_check_test.robot">
+<test id="s1-s1-t1" name="Cenário 2: Validar hexadecimais de cores na tabela de Grupos de Cores" line="7">
 <kw name="Dado que o usuário acesse o site da w3schools" owner="setup_teardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:00.674966" level="INFO">Opening browser 'Chrome' to base url 'https://www.w3schools.com'.</msg>
+<msg time="2024-03-13T20:26:56.357705" level="INFO">Opening browser 'Chrome' to base url 'https://www.w3schools.com'.</msg>
 <arg>url=https://www.w3schools.com</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-12T23:12:00.674966" elapsed="38.418948"/>
+<status status="PASS" start="2024-03-13T20:26:56.356670" elapsed="54.330880"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-12T23:12:39.093914" elapsed="0.116087"/>
+<status status="PASS" start="2024-03-13T20:27:50.687550" elapsed="0.129073"/>
 </kw>
-<status status="PASS" start="2024-03-12T23:12:00.673967" elapsed="38.536034"/>
+<status status="PASS" start="2024-03-13T20:26:56.356670" elapsed="54.459953"/>
 </kw>
 <kw name="Dado que o usuário esteja no site da w3schools" owner="home">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:39.232746" level="INFO">Element '//a[@id='navbtn_tutorials']' is displayed.</msg>
+<msg time="2024-03-13T20:27:50.847010" level="INFO">Element '//a[@id='navbtn_tutorials']' is displayed.</msg>
 <arg>${TUTORIALS_DROPDOWN}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-12T23:12:39.211001" elapsed="0.021745"/>
+<status status="PASS" start="2024-03-13T20:27:50.817630" elapsed="0.029380"/>
 </kw>
-<status status="PASS" start="2024-03-12T23:12:39.210001" elapsed="0.022745"/>
+<status status="PASS" start="2024-03-13T20:27:50.816623" elapsed="0.030387"/>
+</kw>
+<kw name="E navegue para o menu Tutorials -&gt; Learn Colors" owner="home">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:50.848017" level="INFO">Clicking element '//a[@id='navbtn_tutorials']'.</msg>
+<arg>${TUTORIALS_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-13T20:27:50.848017" elapsed="0.070146"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LEARN_COLORS_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-13T20:27:50.918163" elapsed="0.021034"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:50.940196" level="INFO">Clicking element '//a[@href="/colors/default.asp"]'.</msg>
+<arg>${LEARN_COLORS_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-13T20:27:50.939197" elapsed="0.584087"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:27:50.847010" elapsed="0.676274"/>
+</kw>
+<kw name="E selecione o tutorial sobre Color Groups" owner="learn_colors">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${COLOR_GROUPS_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-13T20:27:51.525831" elapsed="0.088475"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:51.614306" level="INFO">Clicking element '//a[@href="colors_groups.asp"]'.</msg>
+<arg>${COLOR_GROUPS_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-13T20:27:51.614306" elapsed="0.364274"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:27:51.524820" elapsed="0.454757"/>
+</kw>
+<kw name="Quando visualizar a tabela de grupos de cores" owner="learn_colors">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${COLORS_TABLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-13T20:27:51.979577" elapsed="0.055654"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:27:51.979577" elapsed="0.055654"/>
+</kw>
+<kw name="Então deverá validar os hexadecimais das seguintes cores:" owner="learn_colors">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${colors_for_validation}[${i}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-13T20:27:52.037236" elapsed="0.344928"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:52.400319" level="INFO">Element '//tr[td/a[contains(@href, 'color_tryit') and text()='Black']]' contains text '000000'.</msg>
+<arg>${colors_for_validation}[${i}]</arg>
+<arg>${hexadecimal_numbers}[${i}]</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-13T20:27:52.382164" elapsed="0.018155"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2024-03-13T20:27:52.036231" elapsed="0.365089"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${colors_for_validation}[${i}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-13T20:27:52.401320" elapsed="0.288056"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:52.701406" level="INFO">Element '//tr[td/a[contains(@href, 'color_tryit') and text()='Maroon']]' contains text '800000'.</msg>
+<arg>${colors_for_validation}[${i}]</arg>
+<arg>${hexadecimal_numbers}[${i}]</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-13T20:27:52.689376" elapsed="0.012030"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-03-13T20:27:52.401320" elapsed="0.300086"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${colors_for_validation}[${i}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-13T20:27:52.701406" elapsed="0.276642"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:52.992625" level="INFO">Element '//tr[td/a[contains(@href, 'color_tryit') and text()='Gold']]' contains text 'FFD700'.</msg>
+<arg>${colors_for_validation}[${i}]</arg>
+<arg>${hexadecimal_numbers}[${i}]</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-13T20:27:52.978048" elapsed="0.014577"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-03-13T20:27:52.701406" elapsed="0.291219"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${colors_for_validation}[${i}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-13T20:27:52.992625" elapsed="0.279987"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:53.286638" level="INFO">Element '//tr[td/a[contains(@href, 'color_tryit') and text()='Cyan']]' contains text '00FFFF'.</msg>
+<arg>${colors_for_validation}[${i}]</arg>
+<arg>${hexadecimal_numbers}[${i}]</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-13T20:27:53.272612" elapsed="0.014026"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-03-13T20:27:52.992625" elapsed="0.294013"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${colors_for_validation}[${i}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-13T20:27:53.286638" elapsed="0.401300"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:53.701452" level="INFO">Element '//tr[td/a[contains(@href, 'color_tryit') and text()='Blue']]' contains text '0000FF'.</msg>
+<arg>${colors_for_validation}[${i}]</arg>
+<arg>${hexadecimal_numbers}[${i}]</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-13T20:27:53.687938" elapsed="0.013514"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-03-13T20:27:53.286638" elapsed="0.414814"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${colors_for_validation}[${i}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-13T20:27:53.701452" elapsed="0.319917"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:54.037401" level="INFO">Element '//tr[td/a[contains(@href, 'color_tryit') and text()='Silver']]' contains text 'C0C0C0'.</msg>
+<arg>${colors_for_validation}[${i}]</arg>
+<arg>${hexadecimal_numbers}[${i}]</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-13T20:27:54.021369" elapsed="0.016032"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-03-13T20:27:53.701452" elapsed="0.335949"/>
+</iter>
+<var>${i}</var>
+<value>0</value>
+<value>6</value>
+<status status="PASS" start="2024-03-13T20:27:52.036231" elapsed="2.001170"/>
+</for>
+<status status="PASS" start="2024-03-13T20:27:52.036231" elapsed="2.001170"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-13T20:27:54.038400" elapsed="2.129115"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:27:54.037401" elapsed="2.131108"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:26:56.355704" elapsed="59.812805"/>
+</test>
+<status status="PASS" start="2024-03-13T20:26:56.141697" elapsed="60.027810"/>
+</suite>
+<suite id="s1-s2" name="Html Forms Test" source="C:\Users\leona\OneDrive\Documentos\A_Programming\neowayAutomationRobot\testes\html_forms_test.robot">
+<test id="s1-s2-t1" name="Cenário 3: Validar envio de dados do formulário HTML no tutorial sobre HTML Forms" line="7">
+<kw name="Dado que o usuário acesse o site da w3schools" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:56.178016" level="INFO">Opening browser 'Chrome' to base url 'https://www.w3schools.com'.</msg>
+<arg>url=https://www.w3schools.com</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-13T20:27:56.178016" elapsed="3.476265"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-13T20:27:59.655373" elapsed="0.123992"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:27:56.178016" elapsed="3.601349"/>
+</kw>
+<kw name="Dado que o usuário esteja no site da w3schools" owner="home">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:27:59.798391" level="INFO">Element '//a[@id='navbtn_tutorials']' is displayed.</msg>
+<arg>${TUTORIALS_DROPDOWN}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-13T20:27:59.780369" elapsed="0.019527"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:27:59.780369" elapsed="0.019527"/>
 </kw>
 <kw name="E navegue para o menu Tutorials -&gt; Learn HTML" owner="home">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:39.233253" level="INFO">Clicking element '//a[@id='navbtn_tutorials']'.</msg>
+<msg time="2024-03-13T20:27:59.799896" level="INFO">Clicking element '//a[@id='navbtn_tutorials']'.</msg>
 <arg>${TUTORIALS_DROPDOWN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-12T23:12:39.233253" elapsed="0.071984"/>
+<status status="PASS" start="2024-03-13T20:27:59.799896" elapsed="0.089530"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LEARN_HTML_LINK}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-12T23:12:39.305237" elapsed="0.019087"/>
+<status status="PASS" start="2024-03-13T20:27:59.889426" elapsed="0.023757"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:39.325328" level="INFO">Clicking element '//a[@href='/html/default.asp']'.</msg>
+<msg time="2024-03-13T20:27:59.914190" level="INFO">Clicking element '//a[@href='/html/default.asp']'.</msg>
 <arg>${LEARN_HTML_LINK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-12T23:12:39.324324" elapsed="0.686822"/>
+<status status="PASS" start="2024-03-13T20:27:59.913183" elapsed="0.637051"/>
 </kw>
-<status status="PASS" start="2024-03-12T23:12:39.233253" elapsed="0.778892"/>
+<status status="PASS" start="2024-03-13T20:27:59.799896" elapsed="0.751340"/>
 </kw>
 <kw name="E selecione o tutorial sobre HTML Forms" owner="learn_html">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${HTML_FORMS_LINK}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-03-12T23:12:40.012145" elapsed="0.299927"/>
+<status status="PASS" start="2024-03-13T20:28:00.551236" elapsed="0.288535"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:40.313075" level="INFO">Clicking element '//a[@target='_top' and @href='html_forms.asp']'.</msg>
+<msg time="2024-03-13T20:28:00.840765" level="INFO">Clicking element '//a[@target='_top' and @href='html_forms.asp']'.</msg>
 <arg>${HTML_FORMS_LINK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-12T23:12:40.312072" elapsed="0.410863"/>
+<status status="PASS" start="2024-03-13T20:28:00.840765" elapsed="0.429580"/>
 </kw>
-<status status="PASS" start="2024-03-12T23:12:40.012145" elapsed="0.710790"/>
+<status status="PASS" start="2024-03-13T20:28:00.551236" elapsed="0.719109"/>
 </kw>
 <kw name="E acesse o exercício &quot;Try it yourself&quot; do primeiro exemplo" owner="learn_html">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${TRY_YOURSELF_SUBMIT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-12T23:12:40.723444" elapsed="0.028064"/>
+<status status="PASS" start="2024-03-13T20:28:01.271350" elapsed="0.065518"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:40.753017" level="INFO">Clicking element '//a[@href='tryit.asp?filename=tryhtml_form_submit' and @target='_blank']'.</msg>
+<msg time="2024-03-13T20:28:01.337874" level="INFO">Clicking element '//a[@href='tryit.asp?filename=tryhtml_form_submit' and @target='_blank']'.</msg>
 <arg>${TRY_YOURSELF_SUBMIT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-12T23:12:40.751508" elapsed="0.140324"/>
+<status status="PASS" start="2024-03-13T20:28:01.336868" elapsed="0.115140"/>
 </kw>
 <kw name="Get Window Handles" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:40.924362" level="INFO">@{window_handles} = [ 4D2A7A19CF1417D5983B836802596408 | 5CEAE9CCA94FA1A4C2B5533FE31488AC ]</msg>
+<msg time="2024-03-13T20:28:01.465048" level="INFO">@{window_handles} = [ 2C46955EB195271A63F7367CCF74EEEB | 4550E30ADF492CFA9684891976CBEDF8 ]</msg>
 <var>@{window_handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<status status="PASS" start="2024-03-12T23:12:40.892835" elapsed="0.031527"/>
+<status status="PASS" start="2024-03-13T20:28:01.453008" elapsed="0.012040"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-12T23:12:44.925854" level="INFO">Slept 4 seconds.</msg>
+<msg time="2024-03-13T20:28:05.466835" level="INFO">Slept 4 seconds.</msg>
 <arg>4</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-12T23:12:40.925368" elapsed="4.000486"/>
+<status status="PASS" start="2024-03-13T20:28:01.465048" elapsed="4.001787"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>${window_handles}[1]</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-03-12T23:12:44.926359" elapsed="0.086592"/>
+<status status="PASS" start="2024-03-13T20:28:05.466835" elapsed="0.103736"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-03-12T23:12:45.014416" level="INFO">5CEAE9CCA94FA1A4C2B5533FE31488AC</msg>
+<msg time="2024-03-13T20:28:05.570571" level="INFO">4550E30ADF492CFA9684891976CBEDF8</msg>
 <arg>${window_handles}[1]</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-03-12T23:12:45.013910" elapsed="0.000506"/>
+<status status="PASS" start="2024-03-13T20:28:05.570571" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-03-12T23:12:40.723444" elapsed="4.290972"/>
+<status status="PASS" start="2024-03-13T20:28:01.271350" elapsed="4.299221"/>
 </kw>
 <kw name="Quando preencher o formulário com um nome e sobrenome" owner="learn_html">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${IFRAME_LOCATOR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-12T23:12:45.014416" elapsed="0.043687"/>
+<status status="PASS" start="2024-03-13T20:28:05.571565" elapsed="0.034716"/>
 </kw>
 <kw name="Select Frame" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:45.059108" level="INFO">Selecting frame '//div[@id="iframe"]/div[@id="iframewrapper"]/iframe[@id="iframeResult"]'.</msg>
+<msg time="2024-03-13T20:28:05.607282" level="INFO">Selecting frame '//div[@id="iframe"]/div[@id="iframewrapper"]/iframe[@id="iframeResult"]'.</msg>
 <arg>${IFRAME_LOCATOR}</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<status status="PASS" start="2024-03-12T23:12:45.058103" elapsed="0.034880"/>
+<status status="PASS" start="2024-03-13T20:28:05.607282" elapsed="0.027079"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:45.094053" level="INFO">Typing text 'Leonardo' into text field '//input[@id='fname']'.</msg>
+<msg time="2024-03-13T20:28:05.634361" level="INFO">Typing text 'Leonardo' into text field '//input[@id='fname']'.</msg>
 <arg>${FNAME_FIELD}</arg>
 <arg>Leonardo</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-12T23:12:45.094053" elapsed="0.101824"/>
+<status status="PASS" start="2024-03-13T20:28:05.634361" elapsed="0.711890"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:45.195877" level="INFO">Typing text 'Oliveira' into text field '//input[@id='lname']'.</msg>
+<msg time="2024-03-13T20:28:06.347260" level="INFO">Typing text 'Oliveira' into text field '//input[@id='lname']'.</msg>
 <arg>${LNAME_FIELD}</arg>
 <arg>Oliveira</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-12T23:12:45.195877" elapsed="0.081232"/>
+<status status="PASS" start="2024-03-13T20:28:06.347260" elapsed="0.091984"/>
 </kw>
-<status status="PASS" start="2024-03-12T23:12:45.014416" elapsed="0.262693"/>
+<status status="PASS" start="2024-03-13T20:28:05.571565" elapsed="0.867679"/>
 </kw>
 <kw name="E submeter o formulário" owner="learn_html">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:45.278112" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<msg time="2024-03-13T20:28:06.440243" level="INFO">Clicking element '//input[@type='submit']'.</msg>
 <arg>${SUBMIT_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-12T23:12:45.278112" elapsed="0.076535"/>
+<status status="PASS" start="2024-03-13T20:28:06.440243" elapsed="0.115853"/>
 </kw>
-<status status="PASS" start="2024-03-12T23:12:45.278112" elapsed="0.076535"/>
+<status status="PASS" start="2024-03-13T20:28:06.440243" elapsed="0.115853"/>
 </kw>
 <kw name="Então deve validar se dados enviados foram corretamente recebidos" owner="learn_html">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${RECEIVED_FORM}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-12T23:12:45.355646" elapsed="0.440772"/>
+<status status="PASS" start="2024-03-13T20:28:06.557095" elapsed="0.230780"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:45.812771" level="INFO">Element '//div[contains(@class, 'w3-container') and contains(@class, 'w3-large') and contains(@class, 'w3-border')]' contains text 'Leonardo'.</msg>
+<msg time="2024-03-13T20:28:06.801393" level="INFO">Element '//div[contains(@class, 'w3-container') and contains(@class, 'w3-large') and contains(@class, 'w3-border')]' contains text 'Leonardo'.</msg>
 <arg>${RECEIVED_FORM}</arg>
 <arg>Leonardo</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-03-12T23:12:45.797418" elapsed="0.015353"/>
+<status status="PASS" start="2024-03-13T20:28:06.787875" elapsed="0.013518"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-12T23:12:45.825929" level="INFO">Element '//div[contains(@class, 'w3-container') and contains(@class, 'w3-large') and contains(@class, 'w3-border')]' contains text 'Oliveira'.</msg>
+<msg time="2024-03-13T20:28:06.811903" level="INFO">Element '//div[contains(@class, 'w3-container') and contains(@class, 'w3-large') and contains(@class, 'w3-border')]' contains text 'Oliveira'.</msg>
 <arg>${RECEIVED_FORM}</arg>
 <arg>Oliveira</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-03-12T23:12:45.813778" elapsed="0.012151"/>
+<status status="PASS" start="2024-03-13T20:28:06.802390" elapsed="0.009513"/>
 </kw>
-<status status="PASS" start="2024-03-12T23:12:45.355646" elapsed="0.470283"/>
+<status status="PASS" start="2024-03-13T20:28:06.556096" elapsed="0.255807"/>
 </kw>
 <kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-12T23:12:45.826926" elapsed="2.213767"/>
+<status status="PASS" start="2024-03-13T20:28:06.811903" elapsed="2.173576"/>
 </kw>
-<status status="PASS" start="2024-03-12T23:12:45.826926" elapsed="2.213767"/>
+<status status="PASS" start="2024-03-13T20:28:06.811903" elapsed="2.173576"/>
 </kw>
-<status status="PASS" start="2024-03-12T23:12:00.673967" elapsed="47.367432"/>
+<status status="PASS" start="2024-03-13T20:27:56.177015" elapsed="12.809436"/>
 </test>
-<status status="PASS" start="2024-03-12T23:12:00.469547" elapsed="47.573430"/>
+<status status="PASS" start="2024-03-13T20:27:56.170507" elapsed="12.816944"/>
+</suite>
+<suite id="s1-s3" name="Modal Box Test" source="C:\Users\leona\OneDrive\Documentos\A_Programming\neowayAutomationRobot\testes\modal_box_test.robot">
+<test id="s1-s3-t1" name="Cenário 1: Validando o funcionamento da pagina How To Make a Modal Box With CSS and JavaScript" line="7">
+<kw name="Dado que o usuário acesse o site da w3schools" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:28:08.995966" level="INFO">Opening browser 'Chrome' to base url 'https://www.w3schools.com'.</msg>
+<arg>url=https://www.w3schools.com</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-13T20:28:08.995966" elapsed="31.295309"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-13T20:28:40.292273" elapsed="0.253887"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:28:08.995966" elapsed="31.550194"/>
+</kw>
+<kw name="Dado que o usuário esteja no site da w3schools" owner="home">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:28:40.567187" level="INFO">Element '//a[@id='navbtn_tutorials']' is displayed.</msg>
+<arg>${TUTORIALS_DROPDOWN}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-13T20:28:40.547185" elapsed="0.020991"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:28:40.547185" elapsed="0.020991"/>
+</kw>
+<kw name="E navegue para o menu Tutorials -&gt; Learn How To" owner="home">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:28:40.569174" level="INFO">Clicking element '//a[@id='navbtn_tutorials']'.</msg>
+<arg>${TUTORIALS_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-13T20:28:40.568176" elapsed="0.066037"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LEARN_HOW_TO_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-13T20:28:40.634213" elapsed="0.020057"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:28:40.654776" level="INFO">Clicking element '//a[contains(@class, 'w3-bar-item') and contains(@title, 'How To - Code Snippets')]'.</msg>
+<arg>${LEARN_HOW_TO_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-13T20:28:40.654776" elapsed="1.114202"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:28:40.568176" elapsed="1.200802"/>
+</kw>
+<kw name="E selecione o tutorial sobre Modal Boxes" owner="learn_how_to">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_FIELD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-13T20:28:41.769976" elapsed="0.051307"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:28:41.822300" level="INFO">Typing text 'Modal Box' into text field '//input[@class='searchinput']'.</msg>
+<arg>${SEARCH_FIELD}</arg>
+<arg>Modal Box</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-13T20:28:41.821283" elapsed="0.111954"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:28:41.933237" level="INFO">Clicking element '//a[text()='Modal Boxes']'.</msg>
+<arg>${MODAL_BOX_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-13T20:28:41.933237" elapsed="0.494581"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:28:41.769976" elapsed="0.657842"/>
+</kw>
+<kw name="Quando clico para abrir a modal" owner="learn_how_to">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:28:42.429810" level="INFO">Clicking element '//button[contains(text(), 'Open Modal')]'.</msg>
+<arg>${OPEN_MODAL_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-13T20:28:42.429810" elapsed="0.126334"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:28:42.428811" elapsed="0.127333"/>
+</kw>
+<kw name="Então a modal box deve ficar visível" owner="learn_how_to">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MODAL_BOX}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-13T20:28:42.557153" elapsed="0.240255"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:28:42.556144" elapsed="0.241264"/>
+</kw>
+<kw name="E ao clicar no botão de fechar" owner="learn_how_to">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-13T20:28:42.798409" level="INFO">Clicking element '//span[contains(@class, 'w3-button') and contains(@class, 'w3-display-topright')]'.</msg>
+<arg>${CLOSE_MODAL_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-13T20:28:42.798409" elapsed="0.043629"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:28:42.798409" elapsed="0.043629"/>
+</kw>
+<kw name="Então a modal box não deve mais estar visível" owner="learn_how_to">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${MODAL_BOX}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-03-13T20:28:42.842038" elapsed="0.014018"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:28:42.842038" elapsed="0.014018"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-13T20:28:42.857062" elapsed="2.147207"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:28:42.857062" elapsed="2.147207"/>
+</kw>
+<status status="PASS" start="2024-03-13T20:28:08.994960" elapsed="36.010707"/>
+</test>
+<status status="PASS" start="2024-03-13T20:28:08.988451" elapsed="36.018216"/>
+</suite>
+<status status="PASS" start="2024-03-13T20:26:56.122086" elapsed="108.886593"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Html Forms Test">Html Forms Test</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Colors Check Test &amp; Html Forms Test &amp; Modal Box Test">Colors Check Test &amp; Html Forms Test &amp; Modal Box Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Colors Check Test">Colors Check Test &amp; Html Forms Test &amp; Modal Box Test.Colors Check Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Html Forms Test">Colors Check Test &amp; Html Forms Test &amp; Modal Box Test.Html Forms Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Modal Box Test">Colors Check Test &amp; Html Forms Test &amp; Modal Box Test.Modal Box Test</stat>
 </suite>
 </statistics>
 <errors>
