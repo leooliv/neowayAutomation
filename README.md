@@ -1,5 +1,5 @@
 # Serve Rest Automation
-Repositorio para teste técnico
+Repositório para teste técnico
 
 python/robot project.
 
