@@ -7,15 +7,16 @@ python/robot project.
 
 * Python 3.12.2
 * Robot Framework 7.0
+* chromedriver 123.0.6312.58
 
 ## Requirements
 
 Clone o Repositório
 
-Faça o download das dependências do Node
+Faça o download das dependências do Python
 
 * Tenha uma IDE instalada no seu computador, utilizada para o teste: VSCode.
-* Rode o comando `npm install` na raiz do projeto para instalar todas as dependências.
+* Configure a instância do chromedriver globalmente
 
 ### neowayRobotAutomation\resources\pages
 
@@ -24,7 +25,7 @@ Faça o download das dependências do Node
 | `home.robot`                | Configuração de PageObject da pagina Home da aplicação         |
 | `learn_colors.robot`        | Configuração de PageObject da pagina Learn Colors da aplicação |
 | `learn_how_to.robot`        | Configuração de PageObject da pagina Learn How To              |
-| `learn_html.cy.js`          | Configuração de PageObject da pagina Learn HTML                |
+| `learn_html.robot`          | Configuração de PageObject da pagina Learn HTML                |
 
 ### neowayRobotAutomation\resources\shared
 
